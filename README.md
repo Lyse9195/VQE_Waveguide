@@ -14,8 +14,8 @@ eigenvalue problems arising in rectangular waveguide theory:
 
 | Regime | Equation | Eigenvalue |
 |--------|----------|------------|
-| **Vacuum** | $(-\partial_{xx} - \partial_{yy})\,\Psi = \lambda\,\Psi$ | $\lambda = \omega_{\text{cutoff}}^2 / c^2$ |
-| **Cold Plasma (O-mode)** | $(-\partial_{xx} - \partial_{yy} + \omega_p^2/c^2)\,E_3 = (\omega^2/c^2)\,E_3$ | $\lambda = \omega^2 / c^2$ |
+| **Vacuum** | $(-\partial_{xx} - \partial_{yy}) \Psi = \lambda\Psi$ | $\lambda = \omega_{\text{cutoff}}^2 / c^2$ |
+| **Cold Plasma (O-mode)** | $(-\partial_{xx} - \partial_{yy} + \omega_p^2/c^2) E_3 = (\omega^2/c^2) E_3$ | $\lambda = \omega^2 / c^2$ |
 
 The spatial domain is discretised on a $2^{n_x} \times 2^{n_y}$ grid and
 encoded into $n_x + n_y$ qubits. A hardware-efficient ansatz (HEA) with
@@ -25,7 +25,7 @@ Ry gates and CNOT entanglers is optimised with L-BFGS-B.
 
 An **MLP neural network** is trained to predict good initial circuit parameters
 $\theta_0$ from the problem configuration (grid size, mode index, plasma density),
-replacing random initialisation and typically reducing VQE iterations by 30–60%.
+replacing random initialisation.
 
 ## Repository Structure
 
